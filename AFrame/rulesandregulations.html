@@ -31,28 +31,19 @@
     <header class="masthead">
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-          <h1 class="mx-auto my-0 text-uppercase">CycleMyLyfe</h1>
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">Welcome Player!</h2>
-          <input type="button" class="btn btn-primary js-scroll-trigger" value="Rules & Regulations" id="rules_btn" onclick="rules()">
-    		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Level</button>
-    				<ul class="dropdown-menu">
-    				  <li class="dropdown-item"><a href="level1.html">Level 1</a></li>
-    				  <li class="dropdown-item"><a href="level2.html">Level 2</a></li>
-    				  <li class="dropdown-item"><a href="level3.html">Level 3</a></li>
-              <li class="dropdown-item"><a href="level4.html">Level 4</a></li>
-              <li class="dropdown-item"><a href="level5.html">Level 5</a></li>
-    				</ul>
-              <input type="button" class="btn btn-primary js-scroll-trigger" value="Play Game" id="play_btn" onclick="play_game()">
-            </div>
-          </div>
+          <h1 class="mx-auto my-0 text-uppercase">CycleMyLyfe - Game Rules</h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">1. Select a Level</h2>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">2. Press Play Button to start the game</h2>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">3. Enjoy your game</h2>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">4. Press Quit Button if you wants to quit the game</h2>
+          <a href="#about" onclick="myFunction()" class="btn btn-primary js-scroll-trigger">Return</a>
+        </div>
+      </div>
     </header>
     
-    <script type="text/javascript">  
-        function rules(){
-            location.replace("rulesandregulations.html")
-        }
-        function play_game() {
-          location.replace("level1.html")
+    <script type="text/javascript"> 
+        function myFunction(){
+            location.replace("userpage.html")
         }
     </script>
 
