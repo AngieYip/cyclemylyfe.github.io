@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome to CycleMyLyfe Application</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <!-- SESSION  -->
+    <script src="js/session.js"></script>
+
+  </head>
+  <body id="page-top">
+    <script>
+        var attempts = 3; 
+
+        function validate() {
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("psw").value;
+            if (username == "player" && password == "player123"){
+                // Session.set(username, "player");
+                sessionStorage.setItem("username", "player");
+                alert("Login successfully!");
+                window.location = "userpage.html";
+                return false;
+            } else if (username == "sctf" && password == "sctf123") {
+                sessionStorage.setItem("username", "sctf");
+                alert(sessionStorage.getItem("username"));
+                window.location = "SCTFpage.html";
+            } else {
+                attempts--;
+                alert("You have "+ attempts +" attempt(s) left.");
+
+                if (attempts == 0) {
+                    document.getElementById("uname").disabled = true;
+                    document.getElementById("psw").disabled = true;
+                    document.getElementById("login_btn").disabled = true;
+                    return false;
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <h1 class="mx-auto my-0 text-uppercase">Welcome to CycleMyLyfe Login Page!!!</h1>
+
+            <form action="/action_page.php">
+              <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                      <label for="uname" style="float:left"><b>Username</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="uname" style="float:left;"><b>Password</b></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="height:59px;" placeholder="Username" id="uname" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="password" class="form-control" style="height:59px;" placeholder="Password" id="psw" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="button" class="btn btn-primary js-scroll-trigger" value="Save" id="login_btn" onclick="validate()" style="width:20%;">
+                  </div>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+  </body>
+</html>
