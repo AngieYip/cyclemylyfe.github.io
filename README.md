@@ -6,7 +6,7 @@ The description is required to coordinate the Safe Cycling Task Force (SCTF)’s
 # HOW TO RUN 
 Both the Players and the SCTF Members will see this page when they asscssed our application for the very first time.
 
-
+<<insert image>>
 
 After they click the button,the application will brings them to the login page.
 
