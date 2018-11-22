@@ -4,6 +4,7 @@ The purpose of this software design specification document is to design and prov
 The description is required to coordinate the Safe Cycling Task Force (SCTF)’s aim to improve cycling safety in Singapore. It needs to be a stable reference and outline all parts of the software and how it works.
 
 # HOW TO RUN 
+Prior to the start of the application, the players are required to have a Google Cardboard to enjoy the full experience of the application.
 Both the Players and the SCTF Members will see this page when they asscssed our application for the very first time.
 
 
@@ -12,11 +13,17 @@ After they click the button,the application will brings them to the login page.
 
 
 
-Here, they are required to login with their credentials to access the application. However,  they have only 3 attempts to have a successfully login and should if they failed to login due to invalid credentials after 3 attempts, the application will force 
+Here, they are required to login with their credentials to access the application. However,  they have only 3 attempts to have a successfully login and should if they failed to login due to invalid credentials after 3 attempts, the users will be removed from the application.
 
 # For Players:
-Upon successfully 
+Upon successfully login into the player page, the player will have three options to choose for, which is the Rules & Regulations, Select Level and Play Game.
+When the player click the Rules & Regulations button, he is able to see the ground rules he is required to follow for the application.
 
+
+The player can choose a game level up to his preference via a drop-down button. 
+
+
+And lastly, after the player has selected his ideal game level, he is able to play the application.
 
 # For SCTF Members:
 
